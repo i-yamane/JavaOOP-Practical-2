@@ -10,7 +10,7 @@ public class Pokemon {
 	public int xp=0;
 	public int hp;
 	public int strength;
-	
+
 	public Pokemon(String surname, float size, int level, Specie specie) {
 		this.id = counter;
 		counter++;
@@ -25,7 +25,7 @@ public class Pokemon {
 		this.hp=specie.initialHp;
 		this.strength=specie.initialStrength;
 	}
-	
+
 	public static int getLevelFromXp(int xp) {
 		int res=1;
 		if(xp>=5) {
@@ -42,25 +42,25 @@ public class Pokemon {
 		}
 		return res;
 	}
-	
+
 	public void attack(Pokemon target) {
 		target.hp-=strength;
 	}
-	
+
 	public void receiveXP(int toto){
 		xp+=toto;
 		level = getLevelFromXp(xp);
 	}
-	
+
 	public void eatSweet(Sweet s){
 		if(s.alreadyEaten){
-			System.out.println("Avertissement : bonbon dÈj‡ mangÈ");
+			System.out.println("Avertissement : bonbon d√©j√† mang√©");
 		}else{
 			receiveXP(s.xp);
 			s.alreadyEaten=true;
-		}		
+		}
 	}
-	
+
 	public Pokemon(String surname, float size, int level, Specie specie, int xp) {
 		this(surname,size,level,specie);
 		this.xp=xp;
@@ -72,9 +72,9 @@ public class Pokemon {
 				+ specie + ", xp=" + xp + ", hp=" + hp + ", strength=" + strength + "]";
 	}
 
-	
-	
-	
-	
-	
+
+
+
+
+
 }
