@@ -14,7 +14,7 @@ This is the version for students working with Eclipse on school's virtual machin
 
 * For this practical work, we will start from where we ended last week
 * You can either use your code from last week or download a correction from this git repository:  
-[https://github.com/gaudel/java_PS1](https://github.com/gaudel/java_PS1/archive/main.zip)  
+[https://github.com/gaudel/java_PS2](https://github.com/gaudel/java_PS2/archive/main.zip)  
 * Eclipse can import the project using `File => Import => General => Existing projects into Workspace` feature
 * Take some time to make sure you understand the code and what it is doing. Feel obviously free to ask questions about it
 
