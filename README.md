@@ -1,6 +1,6 @@
-# java_tp2
+# java_tp3
 
-Second practical session for ENSAI's Java class.
+Third practical session for ENSAI's Java class.
 
 Based on:
 - [Olivier Levitt](https://formations.levitt.fr/poo-java/#/) (2019)

@@ -1,14 +1,25 @@
+package main;
+
+import core.*;
+
+/**
+ * Class whose sole responsibility is to start the program, and execute something.
+ */
 public class Main {
 
+	/**
+	 * Entrypoint to the program
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// 2 Pokemons
 		Specie bulbzaurus = new Specie(0,"Bulbzaurus", "GRASS", 10, 1);
 		Pokemon myPokemon = new Pokemon("Bulbzaurus 1", 12f, 1, bulbzaurus);
-		System.out.println(myPokemon.surname + " (" + myPokemon.specie.name + ")");
+		System.out.println(myPokemon.SURNAME + " (" + myPokemon.getSpecie().name + ")");
 		Pokemon myPokemon2 = new Pokemon("Bulbzaurus 2", 12f, 58, bulbzaurus);
 		
 		// Basic info about them
-		System.out.println(myPokemon.level);
+		System.out.println(myPokemon.getLevel());
 		System.out.println(myPokemon.id);
 		System.out.println(myPokemon2.id);
 		
@@ -21,7 +32,7 @@ public class Main {
 		}
 		
 		// Eat a sweet
-		Sweet s = new Sweet("Licorice", 3);
+		Sweet s = new Sweet("Licorice", 10, 3);
 		myPokemon.eatSweet(s);
 		System.out.println(myPokemon);
 		System.out.println(myPokemon2);
@@ -29,21 +40,27 @@ public class Main {
 		System.out.println(myPokemon2);
 		
 		// Pokemon interaction
-		while (myPokemon.hp > 0 && myPokemon2.hp > 0) {
+		while (myPokemon.getHp() > 0 && myPokemon2.getHp() > 0) {
 			myPokemon.attack(myPokemon2);
-			if (myPokemon2.hp > 0) {
+			if (myPokemon2.getHp() > 0) {
 				myPokemon2.attack(myPokemon);
 			}
 		}
-		if (myPokemon.hp > 0) {
+		if (myPokemon.getHp() > 0) {
 			myPokemon.receiveXP(5);
 		} else {
 			myPokemon2.receiveXP(5);
 		}
 
+		myPokemon.attack(myPokemon2);
+		myPokemon.attack(myPokemon2);
+		myPokemon.attack(myPokemon2);
+
 		// End of interaction info
 		System.out.println(myPokemon);
 		System.out.println(myPokemon2);
+
+		
 	}
 
 }
