@@ -1,3 +1,7 @@
+package ai;
+
+import core.Pokemon;
+
 /**
  * Baseline Artificial Intelligence to compare against.
  * 
@@ -8,8 +12,8 @@ public class BaselineAI {
 		int damageOnTarget = estimateDamage(active, target);
 		int damageOnActive = estimateDamage(target, active);
 
-		double survivalActive = active.hp / damageOnActive;
-		double survivalTarget = target.hp / damageOnTarget;
+		double survivalActive = active.getHp() / damageOnActive;
+		double survivalTarget = target.getHp() / damageOnTarget;
 		
 		if (survivalActive >= survivalTarget) {
 			// We will still lead if we attack, so we do
