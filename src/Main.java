@@ -1,10 +1,18 @@
-public class Main {
 
+
+/**
+ * Class whose sole responsibility is to start the program, and execute something.
+ */
+public class Main {
+	/**
+	 * Entrypoint to the program
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// 2 Pokemons
-		Specie bulbzaurus = new Specie(0,"Bulbzaurus", "GRASS", 10, 1);
+		Species bulbzaurus = new Species(0,"Bulbzaurus", "GRASS", 10, 1);
 		Pokemon myPokemon = new Pokemon("Bulbzaurus 1", 12f, 1, bulbzaurus);
-		System.out.println(myPokemon.surname + " (" + myPokemon.specie.name + ")");
+		System.out.println(myPokemon.nickname + " (" + myPokemon.species.name + ")");
 		Pokemon myPokemon2 = new Pokemon("Bulbzaurus 2", 12f, 58, bulbzaurus);
 		
 		// Basic info about them

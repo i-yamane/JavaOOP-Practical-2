@@ -20,7 +20,7 @@ public class BaselineAI {
 		}
 	}
 	
-	private int estimateDamage(Pokemon active, Pokemon target) {
+	public int estimateDamage(Pokemon active, Pokemon target) {
 		// TODO: Uncomment after exercise 5
 		// int damage = active.strength * (1 - target.defense / 100);
 		// if (damage <= 0) {
